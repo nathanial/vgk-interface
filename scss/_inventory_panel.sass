@@ -1,31 +1,35 @@
 .inventory-panel
-  position: absolute
-  left: 30px
-  top: 30px
-
-  .panel-heading
-    padding:0
-
-  .panel-title
-    padding: 10px 15px
+  position: fixed
+  top: 40%
+  left: 50%
+  -webkit-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+  overflow: hidden
+  background: #ddd
+  border: 1px solid #999
+  padding: 15px
 
   .inventory-grid
     position: relative
 
   .inventory-item
     position: absolute
-    width: 35px
-    height: 35px
+    width: 40px
+    height: 40px
     margin: 2px
     border: 1px solid #999
     cursor: pointer
+    overflow: hidden
     background: white
 
 .inventory-content
   position: absolute
-  width: 33px
-  height: 33px
+  width: 40px
+  height: 40px
   background: #eee
+  margin-top: -1px
+  margin-left: -1px
+  border: 1px solid #999
 
 .toolbar-inventory
   margin-top: 10px

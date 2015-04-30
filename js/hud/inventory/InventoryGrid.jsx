@@ -1,6 +1,9 @@
 var React = require('react');
 var InventoryItem = require('./InventoryItem');
 
+var columnWidth = 42;
+var rowHeight = 42;
+
 var InventoryGrid = React.createClass({
 
   getDefaultProps: function(){
@@ -23,7 +26,7 @@ var InventoryGrid = React.createClass({
     var results = [];
     for(var row = 0; row < this.props.rows; row++){
       for(var col = 0; col < this.props.columns; col++){
-        results.push(<InventoryItem left={col*42} top={row*40}></InventoryItem>);
+        results.push(<InventoryItem left={col*columnWidth} top={row*rowHeight}></InventoryItem>);
       }
     }
     return results;
@@ -31,8 +34,8 @@ var InventoryGrid = React.createClass({
 
   _getStyle: function(){
     return {
-      width: this.props.columns * 42,
-      height: this.props.rows * 40
+      width: this.props.columns * columnWidth,
+      height: this.props.rows * rowHeight
     };
   }
 });

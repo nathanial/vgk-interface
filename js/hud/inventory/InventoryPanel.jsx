@@ -18,12 +18,16 @@ var InventoryPanel = React.createClass({
     );
 
     return (
-      <Draggable handle=".panel-title">
-        <Panel header={header} className="inventory-panel">
-          <InventoryGrid ref="backpackInventory" className="inventory-grid backpack-inventory" rows={3} columns={9}></InventoryGrid>
-          <InventoryGrid ref="toolbarInventory" className="inventory-grid toolbar-inventory" rows={1} columns={9}></InventoryGrid>
-        </Panel>
-      </Draggable>
+      <div className="inventory-panel">
+        <InventoryGrid ref="backpackInventory"
+                       className="inventory-grid backpack-inventory"
+                       rows={3} columns={9}>
+        </InventoryGrid>
+        <InventoryGrid ref="toolbarInventory"
+                       className="inventory-grid toolbar-inventory"
+                       rows={1} columns={9}>                     
+        </InventoryGrid>
+      </div>
     );
   },
 
