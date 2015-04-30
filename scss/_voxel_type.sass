@@ -1,0 +1,35 @@
+.voxel-type
+  background: white
+  display: inline-block
+  position: relative
+  height: 65px
+  width: 66px
+  text-align: center
+  border: '1px solid black'
+  margin: 5px
+  overflow: hidden
+  border: 2px solid transparent
+  transition: background 0.2s ease-in-out
+
+  &:hover
+    border-color: #00b3ff
+    box-shadow: 0 0 10px #00b3ff
+    cursor: pointer
+
+  &.selected
+    background: #a6f0ff
+    border-color: #00b3ff
+
+  &:active
+    top: 5px
+
+  .voxel-type-name
+    position: relative
+    display: inline-block
+    top: 47px
+    font-family: 'courier new'
+    font-size: 12px
+    overflow: hidden
+    width: 50px
+    height: 13px
+  

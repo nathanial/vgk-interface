@@ -13,7 +13,7 @@ var InventoryGrid = React.createClass({
 
   render: function(){
     return (
-      <div className="inventory-grid">
+      <div className="inventory-grid" style={this._getStyle()} {...this.props}>
         {this._renderGrid()}
       </div>
     );
@@ -23,10 +23,17 @@ var InventoryGrid = React.createClass({
     var results = [];
     for(var row = 0; row < this.props.rows; row++){
       for(var col = 0; col < this.props.columns; col++){
-        results.push(<InventoryItem left={row*42} top={col*40}></InventoryItem>);
+        results.push(<InventoryItem left={col*42} top={row*40}></InventoryItem>);
       }
     }
     return results;
+  },
+
+  _getStyle: function(){
+    return {
+      width: this.props.columns * 42,
+      height: this.props.rows * 40
+    };
   }
 });
 

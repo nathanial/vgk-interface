@@ -23,7 +23,8 @@ var InventoryItem = React.createClass({
   },
 
   componentDidMount: function(){
-    $(this.getDOMNode()).find('.inventory-content').draggable({
+    var contents = $(this.getDOMNode()).find('.inventory-content');
+    contents.draggable({
       revert: true,
       appendTo: "body",
       helper: "clone"
