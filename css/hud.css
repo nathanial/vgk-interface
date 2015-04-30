@@ -1,0 +1,82 @@
+body { -webkit-user-select: none; }
+
+.voxel-type {
+  background: white;
+  display: inline-block;
+  position: relative;
+  height: 65px;
+  width: 66px;
+  text-align: center;
+  border: '1px solid black';
+  margin: 5px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: background 0.2s ease-in-out;
+}
+
+.voxel-type:hover {
+  border-color: #00b3ff;
+  box-shadow: 0 0 10px #00b3ff;
+  cursor: pointer;
+}
+
+.voxel-type.selected {
+  background: #a6f0ff;
+  border-color: #00b3ff;
+}
+
+.voxel-type:active {
+  top: 5px;
+}
+
+.voxel-type-name {
+  position: relative;
+  display: inline-block;
+  top: 47px;
+  font-family: 'courier new';
+  font-size: 12px;
+  overflow: hidden;
+  width: 50px;
+  height: 13px;
+}
+
+.inventory-panel {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+.inventory-grid {
+  position: relative;
+}
+
+.inventory-panel .panel-heading {
+  padding:0;
+}
+
+.inventory-panel .panel-body {
+  overflow: auto;
+  height: 250px;
+  width: 460px;
+}
+
+.inventory-panel .panel-title {
+  padding: 10px 15px;
+}
+
+.inventory-item {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  margin: 2px;
+  border: 1px solid #999;
+  cursor: pointer;
+  background: white;
+}
+
+.inventory-content {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  background: #aaa;
+}
