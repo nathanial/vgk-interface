@@ -13,7 +13,6 @@ class Player
       if column > 9
         row += 1
         column = 0
-
     @toolbar = {}
 
 module.exports = Player

@@ -29,10 +29,18 @@ var InventoryGrid = React.createClass({
 
   _renderGrid: function(){
     var results = [];
+    var self = this;
     for(var row = 0; row < this.props.rows; row++){
       for(var col = 0; col < this.props.columns; col++){
         var b = this.props.contents[row+","+col];
-        results.push(<InventoryItem left={col*columnWidth} top={row*rowHeight} item={b}></InventoryItem>);
+        results.push(
+          <InventoryItem left={col*columnWidth} top={row*rowHeight} item={b}
+                         itemKey={row+","+col}
+                         key={row+","+col}
+                         onDropItem={self.onDropItem}
+                         onRemoveItem={self.onRemoveItem}>
+          </InventoryItem>
+        );
       }
     }
     return results;
@@ -43,6 +51,16 @@ var InventoryGrid = React.createClass({
       width: this.props.columns * columnWidth,
       height: this.props.rows * rowHeight
     };
+  },
+
+  onDropItem: function(source, itemKey, item){    
+    this.props.contents[itemKey] = item;
+    this.forceUpdate();
+  },
+
+  onRemoveItem: function(source, itemKey){
+    delete this.props.contents[itemKey];
+    this.forceUpdate();
   }
 });
 

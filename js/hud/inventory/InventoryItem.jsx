@@ -4,11 +4,16 @@ var CubeIcon = require('cube-icon');
 var $ = require('jquery');
 require('jquery-ui');
 
+var Dragged;
+
 var InventoryItem = React.createClass({
   propTypes: {
     left: React.PropTypes.number.isRequired,
     top: React.PropTypes.number.isRequired,
-    item: React.PropTypes.object.isRequired
+    itemKey: React.PropTypes.string.isRequired,
+    item: React.PropTypes.object.isRequired,
+    onDropItem: React.PropTypes.func.isRequired,
+    onRemoveItem: React.PropTypes.func.isRequired
   },
 
   render: function(){
@@ -25,29 +30,76 @@ var InventoryItem = React.createClass({
   },
 
   componentDidMount: function(){
-    if(!this.props.item){
-      return;
-    }
-    var contents = $(this.getDOMNode()).find('.inventory-content');
-    contents.draggable({
-      revert: true,
-      appendTo: "body",
-      helper: "clone",
-      start: function(){
-        contents.hide();
-      },
-      stop: function(){
-        contents.show();
-      }
-    });
-    var cube = this.props.item.render();
-    contents.append(cube);
+    this._reloadContent();
+  },
+
+  componentDidUpdate: function(){
+    this._reloadContent();
   },
 
   componentWillUnmount: function(){
-    if(this.props.item){
+    this.oldItem = undefined;
+    this.loaded = false;
+    try {
       $(this.getDOMNode()).find('.inventory-content').draggable('destroy');
+    } catch(err){
+
     }
+  },
+
+  _reloadContent: function(){
+    if(this.loaded && (this.props.item === this.oldItem)){
+      return;
+    }
+    this.oldItem = this.props.item;
+    console.log("UPDATED");
+    this.loaded = true;
+    
+    var self = this;
+    var contents = $(this.getDOMNode()).find('.inventory-content');
+    contents.empty();
+    if(this.props.item){
+      if(!contents.hasClass('.ui-draggable')){
+        contents.draggable({
+          revert: "invalid",
+          appendTo: "body",
+          helper: "clone",
+          start: function(){
+            Dragged = {
+              item: self.props.item,
+              source: self
+            };
+            contents.hide();
+          },
+          stop: function(){
+            contents.show();
+          }
+        });
+      }
+      var cube = this.props.item.render();
+      contents.append(cube);
+    } else {
+      if(!contents.hasClass('.ui-draggable')){
+        contents.droppable({
+          accept: '.inventory-content',
+          drop: function(event, ui){
+            if(Dragged){
+              Dragged.source.removeItem();
+              self.setItem(Dragged.item);
+            }
+            Dragged = undefined;
+          }
+        });
+      }
+    }
+  },
+
+  setItem: function(item){
+    this.props.onDropItem(this, this.props.itemKey, item);
+  },
+
+  removeItem: function(){
+    this.props.onRemoveItem(this, this.props.itemKey);
   }
 
 });
