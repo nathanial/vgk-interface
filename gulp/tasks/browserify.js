@@ -8,7 +8,7 @@ var source = require('vinyl-source-stream');
 
 var config = {
   debug: true,
-  extensions: ['.jsx'],
+  extensions: ['.jsx','.coffee'],
 
   bundleConfigs: [{
     entries: './js/main.js',

@@ -3,14 +3,21 @@ var $ = require('jquery');
 var _ = require('lodash');
 var Toolbox = require('./Toolbox');
 var InventoryPanel = require('./inventory/InventoryPanel');
+var Player = require('../player/Player');
 
 var HUD = React.createClass({
+
+  getInitialState: function(){
+    return {
+      player: new Player()
+    };
+  },
+
   render: function(){
     var style = this.getStyle();
     return (
       <div style={style.hud}>
-        <InventoryPanel></InventoryPanel>
-        <Toolbox></Toolbox>
+        <InventoryPanel player={this.state.player}></InventoryPanel>
       </div>
     );
   },

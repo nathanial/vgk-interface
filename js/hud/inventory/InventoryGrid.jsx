@@ -6,13 +6,18 @@ var rowHeight = 42;
 
 var InventoryGrid = React.createClass({
 
+  propTypes: {
+    rows: React.PropTypes.number,
+    columns: React.PropTypes.number,
+    contents: React.PropTypes.object.isRequired
+  },
+
   getDefaultProps: function(){
     return {
       rows: 10,
       columns: 10
     };
   },
-
 
   render: function(){
     return (
@@ -26,7 +31,8 @@ var InventoryGrid = React.createClass({
     var results = [];
     for(var row = 0; row < this.props.rows; row++){
       for(var col = 0; col < this.props.columns; col++){
-        results.push(<InventoryItem left={col*columnWidth} top={row*rowHeight}></InventoryItem>);
+        var b = this.props.contents[row+","+col];
+        results.push(<InventoryItem left={col*columnWidth} top={row*rowHeight} item={b}></InventoryItem>);
       }
     }
     return results;

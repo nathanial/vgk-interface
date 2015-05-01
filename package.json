@@ -8,6 +8,7 @@
   "license": "ISC",
   "browserify": {
     "transform": [
+      "coffeeify",
       "reactify"
     ]
   },
@@ -15,6 +16,8 @@
     "bootstrap": "^3.3.4",
     "browser-sync": "^2.6.4",
     "browserify": "^9.0.8",
+    "coffeeify": "^1.1.0",
+    "cube-icon": "^0.2.1",
     "font-awesome": "^4.3.0",
     "gulp": "^3.8.11",
     "gulp-notify": "^2.2.0",
