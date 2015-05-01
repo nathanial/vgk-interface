@@ -114,6 +114,87 @@ var VoxelTypes = [
   {
     name:'Sand',
     images:'images/blocks/sand.png'
+  },
+  {
+    name: 'Sandstone',
+    images: {
+      top: 'images/blocks/sandstone_stop.png',
+      side: 'images/blocks/sandstone_normal.png',
+      bottom: 'images/blocks/sandstone_bottom.png'
+    }
+  },
+  {
+    name: 'Sandstone Carved',
+    images: {
+      top: 'images/blocks/sandstone_top.png',
+      side: 'images/blocks/sandstone_carved.png',
+      bottom: 'images/blocks/sandstone_bottom.png'
+    }
+  },
+  {
+    name: 'Sandstone Smooth',
+    images: {
+      top: 'images/blocks/sandstone_top.png',
+      side: 'images/blocks/sandstone_smooth.png',
+      bottom: 'images/blocks/sandstone_bottom.png'
+    }
+  },
+  {
+    name:'Bedrock',
+    images:'images/blocks/bedrock.png'
+  },
+  {
+    name: 'Bookshelf',
+    images: {
+      top: 'images/blocks/planks_acacia.png',
+      side: 'images/blocks/bookshelf.png',
+      bottom: 'images/blocks/planks_acacia.png'
+    }
+  },
+  {
+    name: 'Cactus',
+    images: {
+      top: 'images/blocks/cactus_top.png',
+      side: 'images/blocks/cactus_side.png',
+      bottom: 'images/blocks/cactus_bottom.png'
+    }
+  },
+  {
+    name: 'Redstone',
+    images: 'images/blocks/redstone_block.png'
+  },
+  {
+    name: 'Redstone Ore',
+    images: 'images/blocks/redstone_ore.png'
+  },
+  {
+    name: 'Red Sandstone',
+    images: {
+      top: 'images/blocks/red_sandstone.png',
+      bottom: 'images/blocks/red_sandstone_bottom.png',
+      side: 'images/blocks/red_sandstone.png'
+    }
+  },
+  {
+    name: 'Red Sandstone Carved',
+    images: {
+      top: 'images/blocks/red_sandstone_carved.png',
+      bottom: 'images/blocks/red_sandstone_bottom.png',
+      side: 'images/blocks/red_sandstone_carved.png'
+    }
+  },
+  {
+    name: 'Red Sandstone Smooth',
+    images: {
+      top: 'images/blocks/red_sandstone_smooth.png',
+      bottom: 'images/blocks/red_sandstone_bottom.png',
+      side: 'images/blocks/red_sandstone_smooth.png'
+    }
+  },
+  {
+    name: 'Red Sand',
+    images: 'images/blocks/red_sand.png'
   }
+
 ];
 module.exports = VoxelTypes;

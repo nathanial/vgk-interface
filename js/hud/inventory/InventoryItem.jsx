@@ -65,8 +65,9 @@ var InventoryItem = React.createClass({
     }
 
     contents.empty();
-    if(this.props.item){
 
+    if(this.props.item){
+      contents.append($("<span class=\"inventory-item-count\">"+this.props.item.count+"</span>"))
       contents.draggable({
         revert: "invalid",
         appendTo: "body",
