@@ -52,45 +52,49 @@ var InventoryItem = React.createClass({
       return;
     }
     this.oldItem = this.props.item;
-    console.log("UPDATED");
     this.loaded = true;
-    
+
+
     var self = this;
     var contents = $(this.getDOMNode()).find('.inventory-content');
+
+    if(contents.hasClass('.ui-draggable')){
+      contents.draggable('destroy');
+    } else if(contents.hasClass('ui-droppable')){
+      contents.droppable('destroy');
+    }
+
     contents.empty();
     if(this.props.item){
-      if(!contents.hasClass('.ui-draggable')){
-        contents.draggable({
-          revert: "invalid",
-          appendTo: "body",
-          helper: "clone",
-          start: function(){
-            Dragged = {
-              item: self.props.item,
-              source: self
-            };
-            contents.hide();
-          },
-          stop: function(){
-            contents.show();
-          }
-        });
-      }
+
+      contents.draggable({
+        revert: "invalid",
+        appendTo: "body",
+        helper: "clone",
+        start: function(){
+          Dragged = {
+            item: self.props.item,
+            source: self
+          };
+          contents.hide();
+        },
+        stop: function(){
+          contents.show();
+        }
+      });
       var cube = this.props.item.render();
       contents.append(cube);
     } else {
-      if(!contents.hasClass('.ui-draggable')){
-        contents.droppable({
-          accept: '.inventory-content',
-          drop: function(event, ui){
-            if(Dragged){
-              Dragged.source.removeItem();
-              self.setItem(Dragged.item);
-            }
-            Dragged = undefined;
+      contents.droppable({
+        accept: '.inventory-content',
+        drop: function(event, ui){
+          if(Dragged){
+            Dragged.source.removeItem();
+            self.setItem(Dragged.item);
           }
-        });
-      }
+          Dragged = undefined;
+        }
+      });
     }
   },
 
