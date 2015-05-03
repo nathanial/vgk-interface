@@ -16,7 +16,7 @@ Block.prototype.render = function(){
   var cube = $(CubeIcon({
     side: side,
     top: top,
-    scale: 0.5,
+    scale: 0.543,
     size: 42,
     faceFilters: {
       front: 'brightness(70%)',

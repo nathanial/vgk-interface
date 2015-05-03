@@ -15,7 +15,7 @@ class Player
     for {name} in VoxelTypes
       @backpack[row+','+column] = new Block(name, (random() * 40).toFixed(0))
       column += 1
-      if column > 9
+      if column > 19
         row += 1
         column = 0
     @toolbar = {}

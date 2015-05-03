@@ -2,17 +2,17 @@
   {
     "name" : "Spruce Log",
     "images" : {
-      "top" : "./log_spruce_top.png",
-      "side" : "./log_spruce.png",
-      "bottom" : "./log_spruce_top.png"
+      "top" : "/assets/organic/trees/spruce/log_spruce_top.png",
+      "side" : "/assets/organic/trees/spruce/log_spruce.png",
+      "bottom" : "/assets/organic/trees/spruce/log_spruce_top.png"
     }
   },
   {
     "name" : "Spruce Leaves",
-    "images" : "./leaves_spruce.png"
+    "images" : "/assets/organic/trees/spruce/leaves_spruce.png"
   },
   {
     "name" : "Spruce Planks",
-    "images" : "./planks_spruce.png"
+    "images" : "/assets/organic/trees/spruce/planks_spruce.png"
   }
 ]

@@ -1,8 +1,8 @@
 {
   "name" : "Cactus",
   "images" : {
-    "top" : "./cactus_top.png",
-    "side" : "./cactus_side.png",
-    "bottom" : "./cactus_bottom.png"
+    "top" : "/assets/organic/cactus/cactus_top.png",
+    "side" : "/assets/organic/cactus/cactus_side.png",
+    "bottom" : "/assets/organic/cactus/cactus_bottom.png"
   }
 }

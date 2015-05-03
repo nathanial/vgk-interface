@@ -2,17 +2,17 @@
   {
     "name" : "Jungle Log",
     "images" : {
-      "top" : "./log_jungle_top.png",
-      "side" : "./log_jungle.png",
-      "bottom" : "./log_jungle_bottom.png"
+      "top" : "/assets/organic/trees/jungle/log_jungle_top.png",
+      "side" : "/assets/organic/trees/jungle/log_jungle.png",
+      "bottom" : "/assets/organic/trees/jungle/log_jungle_bottom.png"
     }
   },
   {
     "name" : "Jungle Leaves",
-    "images" : "./leaves_jungle.png"
+    "images" : "/assets/organic/trees/jungle/leaves_jungle.png"
   },
   {
     "name" : "Jungle Planks",
-    "images" : "./planks_jungle.png"
+    "images" : "/assets/organic/trees/jungle/planks_jungle.png"
   }
 ]

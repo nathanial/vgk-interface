@@ -1,42 +1,42 @@
  [
    {
      "name" : "Dirt",
-     "images" : "./dirt.png",
+     "images" : "/assets/inanimate/dirt/dirt.png",
    },
    {
      "name" : "Coarse Dirt",
-     "images" : "./coarse_dirt.png"
+     "images" : "/assets/inanimate/dirt/coarse_dirt.png"
    },
    {
      "name" : "Dirt Podzol",
      "images" : {
-       "top" : "./dirt_podzol_top.png",
-       "side": "./dirt_podzol_side.png",
-       "bottom" : "./dirt.png"
+       "top" : "/assets/inanimate/dirt/dirt_podzol_top.png",
+       "side": "/assets/inanimate/dirt/dirt_podzol_side.png",
+       "bottom" : "/assets/inanimate/dirt/dirt.png"
      }
    },
    {
      "name" : "Farmland Wet",
      "images" : {
-       "top" : "./farmland_wet.png",
-       "side" : "./dirt.png",
-       "bottom" : "./dirt.png"
+       "top" : "/assets/inanimate/dirt/farmland_wet.png",
+       "side" : "/assets/inanimate/dirt/dirt.png",
+       "bottom" : "/assets/inanimate/dirt/dirt.png"
      }
    },
    {
      "name" : "Farmland Dry",
      "images" : {
-       "top" : "./farmland_dry.png",
-       "side" : "./dirt.png",
-       "bottom" : "./dirt.png"
+       "top" : "/assets/inanimate/dirt/farmland_dry.png",
+       "side" : "/assets/inanimate/dirt/dirt.png",
+       "bottom" : "/assets/inanimate/dirt/dirt.png"
      }
    },
    {
      "name" : "Grass",
      "images" : {
-       "top" : "./grass_top.png",
-       "side" : "./grass_side.png",
-       "bottom": "./dirt.png"
+       "top" : "/assets/inanimate/dirt/grass_top.png",
+       "side" : "/assets/inanimate/dirt/grass_side.png",
+       "bottom": "/assets/inanimate/dirt/dirt.png"
      }
    }
  ]

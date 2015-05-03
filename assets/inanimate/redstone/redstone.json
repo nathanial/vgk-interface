@@ -1,10 +1,10 @@
 [
   {
     "name" : "Redstone Block",
-    "images" : "./redstone_block.png"
+    "images" : "/assets/inanimate/redstone/redstone_block.png"
   },
   {
     "name" : "Redstone Ore",
-    "images" : "./redstone_ore.png"
+    "images" : "/assets/inanimate/redstone/redstone_ore.png"
   }
 ]

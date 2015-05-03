@@ -1,10 +1,10 @@
 [
   {
     "name" : "Iron Block",
-    "images" : "./iron_block.png"
+    "images" : "/assets/inanimate/iron/iron_block.png"
   },
   {
     "name" : "Iron Ore",
-    "images" : "./iron_ore.png"
+    "images" : "/assets/inanimate/iron/iron_ore.png"
   }
 ]

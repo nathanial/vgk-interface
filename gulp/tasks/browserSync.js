@@ -13,4 +13,5 @@ gulp.task('browserSync', ['build'], function(){
   gulp.watch('images/**/*.*', ['images']);
   gulp.watch('./build/**/*.*').on('change', reload);
   gulp.watch('scss/**/*.*', ['sass']);
+  gulp.watch('assets/**/*.*', ['assets', 'browserify']);
 });

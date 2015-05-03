@@ -7,7 +7,7 @@ var InventoryGrid = require('./InventoryGrid');
 var InventoryPanel = React.createClass({
 
   propTypes: {
-    player: React.PropTypes.object.isRequired    
+    player: React.PropTypes.object.isRequired
   },
 
   render: function(){
@@ -26,11 +26,11 @@ var InventoryPanel = React.createClass({
       <div className="inventory-panel">
         <InventoryGrid ref="backpackInventory"
                        className="inventory-grid backpack-inventory"
-                       rows={3} columns={9} contents={this.props.player.backpack}>
+                       rows={7} columns={20} contents={this.props.player.backpack}>
         </InventoryGrid>
         <InventoryGrid ref="toolbarInventory"
                        className="inventory-grid toolbar-inventory"
-                       rows={1} columns={9} contents={this.props.player.toolbar}>
+                       rows={1} columns={20} contents={this.props.player.toolbar}>
         </InventoryGrid>
       </div>
     );
