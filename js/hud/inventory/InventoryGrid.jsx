@@ -9,7 +9,8 @@ var InventoryGrid = React.createClass({
   propTypes: {
     rows: React.PropTypes.number,
     columns: React.PropTypes.number,
-    contents: React.PropTypes.object.isRequired
+    contents: React.PropTypes.object.isRequired,
+    onContentChanged: React.PropTypes.func
   },
 
   getDefaultProps: function(){
@@ -53,14 +54,20 @@ var InventoryGrid = React.createClass({
     };
   },
 
-  onDropItem: function(source, itemKey, item){    
+  onDropItem: function(source, itemKey, item){
     this.props.contents[itemKey] = item;
     this.forceUpdate();
+    if(this.props.onContentChanged){
+      this.props.onContentChanged();
+    }
   },
 
   onRemoveItem: function(source, itemKey){
     delete this.props.contents[itemKey];
     this.forceUpdate();
+    if(this.props.onContentChanged){
+      this.props.onContentChanged();
+    }
   }
 });
 

@@ -18,6 +18,7 @@ var HUD = React.createClass({
     return (
       <div style={style.hud}>
         <InventoryPanel player={this.state.player}></InventoryPanel>
+        <Toolbox player={this.state.player}></Toolbox>
       </div>
     );
   },

@@ -23,15 +23,20 @@ var InventoryPanel = React.createClass({
     );
 
     return (
-      <div className="inventory-panel">
-        <InventoryGrid ref="backpackInventory"
-                       className="inventory-grid backpack-inventory"
-                       rows={7} columns={20} contents={this.props.player.backpack}>
-        </InventoryGrid>
-        <InventoryGrid ref="toolbarInventory"
-                       className="inventory-grid toolbar-inventory"
-                       rows={1} columns={20} contents={this.props.player.toolbar}>
-        </InventoryGrid>
+      <div>
+        <div className="inventory-panel-background"></div>
+        <div className="inventory-panel">
+          <InventoryGrid ref="backpackInventory"
+                         className="inventory-grid backpack-inventory"
+                         rows={7} columns={20} contents={this.props.player.backpack}
+                         onContentChanged={this.onBackpackChanged}>
+          </InventoryGrid>
+          <InventoryGrid ref="toolbarInventory"
+                         className="inventory-grid toolbar-inventory"
+                         rows={1} columns={9} contents={this.props.player.toolbar}
+                         onContentChanged={this.onToolbarChanged}>
+          </InventoryGrid>
+        </div>
       </div>
     );
   },
@@ -44,6 +49,14 @@ var InventoryPanel = React.createClass({
         top: 3
       }
     };
+  },
+
+  onToolbarChanged: function(){
+    this.props.player.emitEvent('toolbar-changed');
+  },
+
+  onBackpackChanged: function(){
+    this.props.player.emitEvent('backpack-changed');
   }
 });
 

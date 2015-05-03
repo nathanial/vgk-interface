@@ -8,31 +8,31 @@
   background: #ddd
   border: 1px solid #999
   padding: 15px
+  z-index: 101
 
-  .inventory-grid
-    position: relative
+.inventory-grid
+  position: relative
 
-  .inventory-item
-    position: absolute
-    width: 40px
-    height: 40px
-    margin: 2px
-    border: 1px solid #999
-    cursor: pointer
-    overflow: hidden
-    background: #eee
-
-
-
+.inventory-item
+  position: absolute
+  width: 40px
+  height: 40px
+  margin: 2px
+  border: 1px solid #999
+  cursor: pointer
+  overflow: hidden
+  background: #eee
 
 .inventory-content
   position: absolute
   width: 40px
   height: 40px
-
+  z-index: 102
 
 .toolbar-inventory
   margin-top: 10px
+  left: 50%
+  margin-left: -210px
 
 .inventory-item-count
   position: absolute
@@ -42,3 +42,13 @@
   z-index: 11
   color: white
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+
+.inventory-panel-background
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background: black
+  opacity: 0.8
+  z-index: 100

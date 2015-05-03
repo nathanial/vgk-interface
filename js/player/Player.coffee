@@ -1,14 +1,16 @@
 Block = require '../items/Block'
 VoxelTypes = require '../data/VoxelTypes'
+EventEmitter = require 'wolfy87-eventemitter'
 
 seed = 1
 random = ->
   x = Math.sin(seed++) * 10000
   x - Math.floor(x)
 
-class Player
+class Player extends EventEmitter
 
   constructor: ->
+    super()
     @backpack = {}
     row = 0
     column = 0
