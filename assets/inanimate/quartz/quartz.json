@@ -1,0 +1,14 @@
+[
+  {
+    "name" : "Quartz Block",
+    "images" : {
+      "top" : "./quartz_block_top.png",
+      "side" : "./quartz_block_side.png",
+      "bottom" : "./quartz_block_bottom.png"
+    }
+  },
+  {
+    "name" : "Quartz Ore",
+    "images" : "./quart_ore.png"
+  }
+]

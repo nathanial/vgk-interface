@@ -1,0 +1,10 @@
+[
+  {
+    "name" : "Clay",
+    "images" : "./clay.png"
+  },
+  {
+    "name" : "Hardened Clay",
+    "images" : "./hardened_clay"
+  }
+]
