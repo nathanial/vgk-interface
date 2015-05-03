@@ -1,8 +1,0 @@
-{
-  "name" : "Enchanting Table",
-  "images" : {
-    "top" : "./enchanting_table_top.png",
-    "side" : "./enchanting_table_side.png",
-    "bottom" : "./enchanting_table_bottom.png"    
-  }
-}

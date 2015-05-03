@@ -1,4 +1,8 @@
 {
   "name" : "Bookshelf",
-  "images" : "./bookshelf.png"
+  "images" : {
+      "side" : "/assets/artificial/bookshelf/bookshelf.png",
+      "top" : "/assets/organic/trees/acacia/planks_acacia.png",
+      "bottom" : "/assets/organic/trees/acacia/planks_acacia.png"
+  }
 }

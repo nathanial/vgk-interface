@@ -1,6 +1,10 @@
 var _ = require('lodash');
 
 var VoxelTypes = _.flatten([
+  require('../../assets/artificial/beacon/beacon.json'),
+  require('../../assets/artificial/bookshelf/bookshelf.json'),
+  require('../../assets/artificial/crafting_table/crafting_table.json'),
+  require('../../assets/artificial/daylight_detector/daylight_detector.json'),
   require('../../assets/inanimate/dirt/dirt.json'),
   require('../../assets/inanimate/bedrock/bedrock.json'),
   require('../../assets/inanimate/brick/brick.json'),
@@ -21,7 +25,6 @@ var VoxelTypes = _.flatten([
   require('../../assets/inanimate/redstone/redstone.json'),
   require('../../assets/inanimate/sand/sand.json'),
   require('../../assets/inanimate/stone/stone.json'),
-  require('../../assets/organic/cactus/cactus.json'),
   require('../../assets/organic/melon/melon.json'),
   require('../../assets/organic/mushroom/mushroom.json'),
   require('../../assets/organic/nether/nether.json'),
@@ -30,7 +33,7 @@ var VoxelTypes = _.flatten([
   require('../../assets/organic/trees/birch/birch.json'),
   require('../../assets/organic/trees/jungle/jungle.json'),
   require('../../assets/organic/trees/oak/oak.json'),
-  require('../../assets/organic/trees/spruce/spruce.json') 
+  require('../../assets/organic/trees/spruce/spruce.json')
 ]);
 
 module.exports = VoxelTypes;
