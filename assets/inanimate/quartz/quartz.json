@@ -2,29 +2,29 @@
   {
     "name" : "Quartz Block",
     "images" : {
-      "top" : "/assets/inanimate/quartz/quartz_block_top.png",
-      "side" : "/assets/inanimate/quartz/quartz_block_side.png",
-      "bottom" : "/assets/inanimate/quartz/quartz_block_bottom.png"
+      "top" : "assets/inanimate/quartz/quartz_block_top.png",
+      "side" : "assets/inanimate/quartz/quartz_block_side.png",
+      "bottom" : "assets/inanimate/quartz/quartz_block_bottom.png"
     }
   },
   {
     "name" : "Chiseled Quart Block",
     "images" : {
-      "top" : "/assets/inanimate/quartz/quartz_block_chiseled_top.png",
-      "side" : "/assets/inanimate/quartz/quartz_block_chiseled.png",
-      "bottom" : "/assets/inanimate/quartz/quartz_block_chiseled_top.png"
+      "top" : "assets/inanimate/quartz/quartz_block_chiseled_top.png",
+      "side" : "assets/inanimate/quartz/quartz_block_chiseled.png",
+      "bottom" : "assets/inanimate/quartz/quartz_block_chiseled_top.png"
     }
   },
   {
     "name" : "Lined Quartz Block",
     "images" : {
-      "top" : "/assets/inanimate/quartz/quartz_block_lines_top.png",
-      "side" : "/assets/inanimate/quartz/quartz_block_lines.png",
-      "bottom" : "/assets/inanimate/quartz/quartz_block_lines_top.png"
+      "top" : "assets/inanimate/quartz/quartz_block_lines_top.png",
+      "side" : "assets/inanimate/quartz/quartz_block_lines.png",
+      "bottom" : "assets/inanimate/quartz/quartz_block_lines_top.png"
     }
   },
   {
     "name" : "Quartz Ore",
-    "images" : "/assets/inanimate/quartz/quartz_ore.png"
+    "images" : "assets/inanimate/quartz/quartz_ore.png"
   }
 ]

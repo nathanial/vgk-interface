@@ -1,14 +1,14 @@
 [
   {
     "name" : "Nether Brick",
-    "images": "/assets/organic/nether/nether_brick.png"
+    "images": "assets/organic/nether/nether_brick.png"
   },
   {
     "name" : "Netherrack",
-    "images" : "/assets/organic/nether/netherrack.png"
+    "images" : "assets/organic/nether/netherrack.png"
   },
   {
     "name" : "Soul Sand",
-    "images" : "/assets/organic/nether/soul_sand.png"
+    "images" : "assets/organic/nether/soul_sand.png"
   }
 ]

@@ -1,9 +1,9 @@
 {
   "name" : "Crafting Table",
   "images" : {
-    "top" : "/assets/artificial/crafting_table/crafting_table_top.png",
-    "side" : "/assets/artificial/crafting_table/crafting_table_side.png",
-    "front" : "/assets/artificial/crafting_table/crafting_table_front.png",
-    "bottom" : "/assets/organic/trees/acacia/planks_acacia.png"
+    "top" : "assets/artificial/crafting_table/crafting_table_top.png",
+    "side" : "assets/artificial/crafting_table/crafting_table_side.png",
+    "front" : "assets/artificial/crafting_table/crafting_table_front.png",
+    "bottom" : "assets/organic/trees/acacia/planks_acacia.png"
   }
 }

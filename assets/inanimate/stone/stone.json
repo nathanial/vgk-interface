@@ -1,54 +1,54 @@
 [
   {
     "name" : "Stone",
-    "images" : "/assets/inanimate/stone/stone.png"
+    "images" : "assets/inanimate/stone/stone.png"
   },
   {
     "name" : "Stone Slab",
     "images" : {
-      "top" : "/assets/inanimate/stone/stone_slab_top.png",
-      "side" : "/assets/inanimate/stone/stone_slab_side.png",
-      "bottom" : "/assets/inanimate/stone/stone_slab_top.png"
+      "top" : "assets/inanimate/stone/stone_slab_top.png",
+      "side" : "assets/inanimate/stone/stone_slab_side.png",
+      "bottom" : "assets/inanimate/stone/stone_slab_top.png"
     }
   },
   {
     "name" : "Stone Brick",
-    "images" : "/assets/inanimate/stone/stonebrick.png"
+    "images" : "assets/inanimate/stone/stonebrick.png"
   },
   {
     "name" : "Carved Stone Brick",
-    "images" : "/assets/inanimate/stone/stonebrick_carved.png"
+    "images" : "assets/inanimate/stone/stonebrick_carved.png"
   },
   {
     "name" : "Cracked Stone Brick",
-    "images" : "/assets/inanimate/stone/stonebrick_cracked.png"
+    "images" : "assets/inanimate/stone/stonebrick_cracked.png"
   },
   {
     "name" : "Mossy Stone Brick",
-    "images" : "/assets/inanimate/stone/stonebrick_mossy.png"
+    "images" : "assets/inanimate/stone/stonebrick_mossy.png"
   },
   {
     "name" : "Granite",
-    "images" : "/assets/inanimate/stone/stone_granite.png"
+    "images" : "assets/inanimate/stone/stone_granite.png"
   },
   {
     "name" : "Smooth Granite",
-    "images" : "/assets/inanimate/stone/stone_granite_smooth.png"
+    "images" : "assets/inanimate/stone/stone_granite_smooth.png"
   },
   {
     "name" : "Diorite",
-    "images" : "/assets/inanimate/stone/stone_diorite.png"
+    "images" : "assets/inanimate/stone/stone_diorite.png"
   },
   {
     "name" : "Smooth Diorite",
-    "images" : "/assets/inanimate/stone/stone_diorite_smooth.png"
+    "images" : "assets/inanimate/stone/stone_diorite_smooth.png"
   },
   {
     "name" : "Andesite",
-    "images" : "/assets/inanimate/stone/stone_andesite.png"
+    "images" : "assets/inanimate/stone/stone_andesite.png"
   },
   {
     "name" : "Smooth Andesite",
-    "images" : "/assets/inanimate/stone/stone_andesite_smooth.png"
+    "images" : "assets/inanimate/stone/stone_andesite_smooth.png"
   }
 ]

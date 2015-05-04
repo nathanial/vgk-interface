@@ -1,10 +1,10 @@
 [
   {
     "name" : "Gold Block",
-    "images" : "/assets/inanimate/gold/gold_block.png"
+    "images" : "assets/inanimate/gold/gold_block.png"
   },
   {
     "name" : "Gold Ore",
-    "images" : "/assets/inanimate/gold/gold_ore.png"
+    "images" : "assets/inanimate/gold/gold_ore.png"
   }
 ]

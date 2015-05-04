@@ -1,10 +1,10 @@
 [
   {
     "name" : "Cobblestone",
-    "images" : "/assets/inanimate/cobblestone/cobblestone.png"
+    "images" : "assets/inanimate/cobblestone/cobblestone.png"
   },
   {
     "name" : "Cobblestone Mossy",
-    "images" : "/assets/inanimate/cobblestone/cobblestone_mossy.png"
+    "images" : "assets/inanimate/cobblestone/cobblestone_mossy.png"
   }
 ]

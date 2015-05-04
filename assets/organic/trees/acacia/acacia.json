@@ -2,17 +2,17 @@
   {
     "name" : "Acacia Log",
     "images" : {
-      "side" : "/assets/organic/trees/acacia/log_acacia.png",
-      "top" : "/assets/organic/trees/acacia/log_acacia_top.png",
-      "bottom" : "/assets/organic/trees/acacia/log_acacia_bottom.png"
+      "side" : "assets/organic/trees/acacia/log_acacia.png",
+      "top" : "assets/organic/trees/acacia/log_acacia_top.png",
+      "bottom" : "assets/organic/trees/acacia/log_acacia_bottom.png"
     }
   },
   {
     "name" : "Acacia Planks",
-    "images" : "/assets/organic/trees/acacia/planks_acacia.png"
+    "images" : "assets/organic/trees/acacia/planks_acacia.png"
   },
   {
     "name" : "Acacia Leaves",
-    "images" : "/assets/organic/trees/acacia/leaves_acacia.png"
+    "images" : "assets/organic/trees/acacia/leaves_acacia.png"
   }
 ]

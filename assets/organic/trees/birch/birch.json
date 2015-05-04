@@ -2,16 +2,16 @@
   {
     "name" : "Birch Log",
     "images" : {
-        "top" : "/assets/organic/trees/birch/log_birch_top.png",
-        "side" : "/assets/organic/trees/birch/log_birch.png"
+        "top" : "assets/organic/trees/birch/log_birch_top.png",
+        "side" : "assets/organic/trees/birch/log_birch.png"
     }
   },
   {
     "name" : "Birch Leaves",
-    "images" : "/assets/organic/trees/birch/leaves_birch.png"
+    "images" : "assets/organic/trees/birch/leaves_birch.png"
   },
   {
     "name" : "Birch Planks",
-    "images" : "/assets/organic/trees/birch/planks_birch.png"
+    "images" : "assets/organic/trees/birch/planks_birch.png"
   }
 ]

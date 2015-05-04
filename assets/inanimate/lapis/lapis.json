@@ -1,10 +1,10 @@
 [
   {
     "name" : "Lapis Block",
-    "images" : "/assets/inanimate/lapis/lapis_block.png"
+    "images" : "assets/inanimate/lapis/lapis_block.png"
   },
   {
     "name" : "Lapis Ore",
-    "images" : "/assets/inanimate/lapis/lapis_ore.png"
+    "images" : "assets/inanimate/lapis/lapis_ore.png"
   }
 ]

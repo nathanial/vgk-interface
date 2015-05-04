@@ -10,7 +10,7 @@ var HUD = React.createClass({
   getInitialState: function(){
     return {
       player: new Player()
-    };
+    }; 
   },
 
   render: function(){

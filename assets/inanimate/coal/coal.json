@@ -1,10 +1,10 @@
 [
   {
     "name" : "Coal",
-    "images" : "/assets/inanimate/coal/coal_block.png"
+    "images" : "assets/inanimate/coal/coal_block.png"
   },
   {
     "name" : "Coal Ore",
-    "images" : "/assets/inanimate/coal/coal_ore.png"
+    "images" : "assets/inanimate/coal/coal_ore.png"
   }
 ]
