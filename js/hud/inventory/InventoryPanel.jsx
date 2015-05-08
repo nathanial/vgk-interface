@@ -23,7 +23,7 @@ var InventoryPanel = React.createClass({
     );
 
     return (
-      <div>
+      <div {...this.props}>
         <div className="inventory-panel-background"></div>
         <div className="inventory-panel">
           <InventoryGrid ref="backpackInventory"
