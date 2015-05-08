@@ -3,7 +3,8 @@ var VoxelTypes = require('./data/VoxelTypes');
 var _ = require('lodash');
 var HUD = require('./hud/HUD');
 var $ = require('jquery');
-var engine = require('./engine/coherent');
+
+window.engine = require('./engine/coherent');
 var Mousetrap = require('mousetrap');
 var Commands = require('./commands');
 

@@ -3,6 +3,8 @@ Command = require './Command'
 class SaveWorldCommand extends Command
 
   invoke: ->
-    console.log("Save World")
+    console.log("Started Save World")
+    window.engine.call('SaveWorld').then =>
+      console.log("Finished Save World")
 
 module.exports = SaveWorldCommand
