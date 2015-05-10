@@ -1,8 +1,7 @@
 Command = require './Command'
 
 class ExitGameCommand extends Command
-
   invoke: ->
-    console.log("Exit Game")
+    @engine.call("ExitGame")
 
 module.exports = ExitGameCommand

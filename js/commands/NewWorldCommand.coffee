@@ -1,8 +1,7 @@
 Command = require './Command'
 
 class NewWorldCommand extends Command
-
   invoke: ->
-    console.log("New World")
+    @engine.call("NewWorld")
 
 module.exports = NewWorldCommand

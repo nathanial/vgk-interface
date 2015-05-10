@@ -1,7 +1,7 @@
 Command = require './Command'
 
 class LoadWorldCommand extends Command
-  invoke: ->
-    console.log("Load World")
+  invoke: ->    
+    throw "Not Implemented"
 
 module.exports = LoadWorldCommand

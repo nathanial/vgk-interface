@@ -24,18 +24,19 @@ var InventoryPanel = React.createClass({
 
     return (
       <div {...this.props}>
-        <div className="inventory-panel-background"></div>
-        <div className="inventory-panel">
-          <InventoryGrid ref="backpackInventory"
-                         className="inventory-grid backpack-inventory"
-                         rows={7} columns={20} contents={this.props.player.backpack}
-                         onContentChanged={this.onBackpackChanged}>
-          </InventoryGrid>
-          <InventoryGrid ref="toolbarInventory"
-                         className="inventory-grid toolbar-inventory"
-                         rows={1} columns={9} contents={this.props.player.toolbar}
-                         onContentChanged={this.onToolbarChanged}>
-          </InventoryGrid>
+        <div className="panel-container">
+          <div className="inventory-panel centered-panel panel">
+            <InventoryGrid ref="backpackInventory"
+                           className="inventory-grid backpack-inventory"
+                           rows={7} columns={20} contents={this.props.player.backpack}
+                           onContentChanged={this.onBackpackChanged}>
+            </InventoryGrid>
+            <InventoryGrid ref="toolbarInventory"
+                           className="inventory-grid toolbar-inventory"
+                           rows={1} columns={9} contents={this.props.player.toolbar}
+                           onContentChanged={this.onToolbarChanged}>
+            </InventoryGrid>
+          </div>
         </div>
       </div>
     );

@@ -1,0 +1,31 @@
+
+.panel-container
+  display: flex
+  align-items: center
+  justify-content: center
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+
+  .panel
+    overflow: hidden
+    border: 1px solid #999
+    z-index: 101
+
+    .panel-header
+      position: relative
+      height: 30px
+      width: 100%
+      display: block
+      border-bottom: 1px solid #ccc
+      .panel-title
+        font-size: 18px
+        color: #555
+
+    .panel-content
+      position: relative
+
+    .panel-footer
+      width: 100%
