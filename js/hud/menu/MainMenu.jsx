@@ -6,29 +6,33 @@ var SaveWorldCommand = require('../../commands/SaveWorldCommand');
 var ExitGameCommand = require('../../commands/ExitGameCommand');
 var GlobalEventService = require('../../GlobalEventService');
 var LoadWorldPanel = require('./LoadWorldPanel');
+var Panel = require('../../components/Panel');
 
 var MainMenu = React.createClass({
 
   getInitialState: function(){
     return {
-      panel: 'load-panel'
+      panel: 'main-menu',
+      worlds: []
     };
   },
 
   render: function(){
     var style = this.getStyle();
     return (
-      <div {...this.props}>
-        <div className="panel-container">
-          <div className="main-menu panel centered-panel" style={style.mainMenu}>
-            <Button onClick={this.onNewWorldClick}>New World</Button>
-            <Button onClick={this.onLoadWorldClick}>Load World</Button>
-            <Button onClick={this.onSaveWorldClick}>Save World</Button>
-            <Button onClick={this.onExitGame}>Exit Game</Button>
-          </div>
-          <LoadWorldPanel style={style.loadPanel}></LoadWorldPanel>
+      <Panel {...this.props}>
+        <div className="panel-content main-menu">
+          <Button onClick={this.onNewWorldClick}>New World</Button>
+          <Button onClick={this.onLoadWorldClick}>Load World</Button>
+          <Button onClick={this.onSaveWorldClick}>Save World</Button>
+          <Button onClick={this.onExitGame}>Exit Game</Button>
         </div>
-      </div>
+        <LoadWorldPanel style={style.loadPanel}
+                        worlds={this.state.worlds}
+                        onLoadWorld={this.onLoadWorld}
+                        onClose={this.onCloseLoadPanel}>
+        </LoadWorldPanel>
+      </Panel>
     );
   },
 
@@ -52,9 +56,23 @@ var MainMenu = React.createClass({
   },
 
   onLoadWorldClick: function(){
-    this.setState({
-      panel: 'load-panel'
+    var self = this;
+    window.engine.call("FindLoadableRealms").then(function(loadableWorlds){
+      console.log(loadableWorlds);
+      loadableWorlds = JSON.parse(loadableWorlds);
+      self.setState({
+        worlds: loadableWorlds,
+        panel: 'load-panel'
+      });
     });
+  },
+
+  onLoadWorld: function(){
+
+  },
+
+  onCloseLoadPanel: function(){
+
   },
 
   onSaveWorldClick: function(){

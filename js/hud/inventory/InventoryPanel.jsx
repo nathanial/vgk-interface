@@ -3,6 +3,7 @@ var Draggable = require('react-draggable2');
 var Panel = require('react-bootstrap/lib/Panel');
 var Button = require('react-bootstrap/lib/Button');
 var InventoryGrid = require('./InventoryGrid');
+var Panel = require('../../components/Panel');
 
 var InventoryPanel = React.createClass({
 
@@ -23,22 +24,20 @@ var InventoryPanel = React.createClass({
     );
 
     return (
-      <div {...this.props}>
-        <div className="panel-container">
-          <div className="inventory-panel centered-panel panel">
-            <InventoryGrid ref="backpackInventory"
-                           className="inventory-grid backpack-inventory"
-                           rows={7} columns={20} contents={this.props.player.backpack}
-                           onContentChanged={this.onBackpackChanged}>
-            </InventoryGrid>
-            <InventoryGrid ref="toolbarInventory"
-                           className="inventory-grid toolbar-inventory"
-                           rows={1} columns={9} contents={this.props.player.toolbar}
-                           onContentChanged={this.onToolbarChanged}>
-            </InventoryGrid>
-          </div>
+      <Panel {...this.props}>
+        <div className="inventory-panel panel-content">
+          <InventoryGrid ref="backpackInventory"
+                         className="inventory-grid backpack-inventory"
+                         rows={7} columns={20} contents={this.props.player.backpack}
+                         onContentChanged={this.onBackpackChanged}>
+          </InventoryGrid>
+          <InventoryGrid ref="toolbarInventory"
+                         className="inventory-grid toolbar-inventory"
+                         rows={1} columns={9} contents={this.props.player.toolbar}
+                         onContentChanged={this.onToolbarChanged}>
+          </InventoryGrid>
         </div>
-      </div>
+      </Panel>
     );
   },
 
