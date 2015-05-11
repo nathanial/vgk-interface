@@ -60,10 +60,12 @@ var HUD = React.createClass({
 
   onExit: function(){
     if(this.state.panel){
+      window.engine.call('UnfreezePlayer')
       this.setState({
         panel: false
       });
     } else {
+      window.engine.call('FreezePlayer')
       this.setState({
         panel: 'main-menu'
       });
@@ -71,6 +73,7 @@ var HUD = React.createClass({
   },
 
   onOpenInventory: function(){
+    window.engine.call('FreezePlayer')
     this.setState({
       panel: 'inventory'
     });
