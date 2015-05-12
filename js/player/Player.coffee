@@ -20,6 +20,6 @@ class Player extends EventEmitter
       if column > 19
         row += 1
         column = 0
-    @toolbar = {}
+    @toolbox = {}
 
 module.exports = Player

@@ -31,10 +31,10 @@ var InventoryPanel = React.createClass({
                          rows={7} columns={20} contents={this.props.player.backpack}
                          onContentChanged={this.onBackpackChanged}>
           </InventoryGrid>
-          <InventoryGrid ref="toolbarInventory"
-                         className="inventory-grid toolbar-inventory"
-                         rows={1} columns={9} contents={this.props.player.toolbar}
-                         onContentChanged={this.onToolbarChanged}>
+          <InventoryGrid ref="toolboxInventory"
+                         className="inventory-grid toolbox-inventory"
+                         rows={1} columns={9} contents={this.props.player.toolbox}
+                         onContentChanged={this.onToolboxChanged}>
           </InventoryGrid>
         </div>
       </Panel>
@@ -51,8 +51,8 @@ var InventoryPanel = React.createClass({
     };
   },
 
-  onToolbarChanged: function(){
-    this.props.player.emitEvent('toolbar-changed');
+  onToolboxChanged: function(){
+    this.props.player.emitEvent('toolbox-changed');
   },
 
   onBackpackChanged: function(){

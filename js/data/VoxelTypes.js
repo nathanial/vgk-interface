@@ -36,4 +36,10 @@ var VoxelTypes = _.flatten([
   require('../../assets/organic/trees/spruce/spruce.json')
 ]);
 
+_.each(VoxelTypes, function(vtype, index){
+  vtype.block = index + 1;
+});
+
+
+
 module.exports = VoxelTypes;

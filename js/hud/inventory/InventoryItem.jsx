@@ -13,7 +13,8 @@ var InventoryItem = React.createClass({
     itemKey: React.PropTypes.string.isRequired,
     item: React.PropTypes.object.isRequired,
     onDropItem: React.PropTypes.func.isRequired,
-    onRemoveItem: React.PropTypes.func.isRequired
+    onRemoveItem: React.PropTypes.func.isRequired,
+    selected: React.PropTypes.bool
   },
 
   render: function(){
@@ -21,8 +22,13 @@ var InventoryItem = React.createClass({
       left: this.props.left,
       top: this.props.top
     };
+    var classes = "inventory-item";
+    console.log("SELECTED", this.props.selected);
+    if(this.props.selected){
+      classes += " selected";
+    }
     return (
-      <div style={start} className="inventory-item">
+      <div style={start} className={classes}>
         <div className="inventory-content">
         </div>
       </div>

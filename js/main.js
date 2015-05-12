@@ -10,12 +10,11 @@ var Commands = require('./commands');
 
 Commands.bind();
 
-engine.on('Ready', function(){
-  engine.call('GetVoxelRegistry').then(function(VoxelRegistry){
-    _.each(VoxelTypes, function(VoxelType){
-      VoxelRegistry.RegisterFromJSON(JSON.stringify(VoxelType));
-    });
+window.engine.on('Ready', function(){
+  _.each(VoxelTypes, function(VoxelType){
+    window.engine.call("RegisterVoxelType", JSON.stringify(VoxelType));
   });
+  window.engine.call("RegistrationFinished");
 });
 
 $(function(){

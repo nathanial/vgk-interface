@@ -1,63 +1,77 @@
-var React = require('react');
-var _ = require('lodash');
-var VoxelTypes = require('../data/VoxelTypes');
-var VoxelType = require('./VoxelType');
-var InventoryGrid = require('./inventory/InventoryGrid');
+import React from 'react';
+import _ from 'lodash';
+import VoxelTypes from '../data/VoxelTypes';
+import VoxelType from './VoxelType';
+import InventoryGrid from './inventory/InventoryGrid';
+import Component from '../components/Component';
+import GlobalEventService from '../GlobalEventService';
 
-var Toolbar = React.createClass({
+class Toolbox extends Component {
 
-  propTypes: {
+  static propTypes = {
     player: React.PropTypes.object.isRequired
-  },
+  }
 
-  getInitialState: function(){
-    return {
-      selected: ''
+  constructor(props){
+    super(props);
+    this.state = {
+      selected: 1
     };
-  },
+  }
 
-  render: function(){
-    var self = this;
+  render(){
+    console.log("SET SELECTED", this.state.selected);
     return (
-      <div className="toolbar">
-        <InventoryGrid columns={9} rows={1} contents={this.props.player.toolbar}></InventoryGrid>
+      <div className="toolbox">
+        <InventoryGrid columns={9}
+                       rows={1}
+                       contents={this.props.player.toolbox}
+                       selected={this.state.selected}>
+        </InventoryGrid>
       </div>
     );
-  },
+  }
 
-  componentDidMount: function(){
-    this._bindToolbarChanged();
-  },
+  componentDidMount(){
+    this._bindToolboxChanged();
+  }
 
-  componentWillUnmount: function(){
-    this._unbindToolbarChanged();
-  },
+  componentWillUnmount(){
+    this._unbindToolboxChanged();
+  }
 
-  componentWillReceiveProps: function(){
-    this._unbindToolbarChanged();
-    this._bindToolbarChanged();
-  },
+  componentWillReceiveProps(){
+    this._unbindToolboxChanged();
+    this._bindToolboxChanged();
+  }
 
-  onSelected: function(voxelType){
+  onSelected(voxelType){
     this.setState({
       selected: voxelType.name
     });
-  },
-
-  onToolbarChanged: function(){
-    this.forceUpdate();
-
-  },
-
-  _bindToolbarChanged: function(){
-    this.toolbarChangedListener = _.bind(this.onToolbarChanged, this);
-    this.props.player.on('toolbar-changed', this.toolbarChangedListener);
-  },
-
-  _unbindToolbarChanged: function(){
-    this.props.player.off('toolbar-changed', this.toolbarChangedListener);
-    this.toolbarChangedListener = undefined;
   }
-});
 
-module.exports = Toolbar;
+  onToolboxChanged(){
+    this.forceUpdate();
+  }
+
+  _bindToolboxChanged(){
+    this.props.player.on('toolbox-changed', this.onToolboxChanged);
+    GlobalEventService.on('toolbox-select', this.onToolboxSelect);
+  }
+
+  _unbindToolboxChanged(){
+    this.props.player.off('toolbox-changed', this.onToolboxChanged);
+    GlobalEventService.off('toolbox-select', this.onToolboxSelect);
+  }
+
+  onToolboxSelect(index){
+    this.setState({
+      selected: index
+    });
+  }
+
+
+}
+
+module.exports = Toolbox;

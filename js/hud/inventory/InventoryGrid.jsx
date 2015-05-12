@@ -10,13 +10,15 @@ var InventoryGrid = React.createClass({
     rows: React.PropTypes.number,
     columns: React.PropTypes.number,
     contents: React.PropTypes.object.isRequired,
-    onContentChanged: React.PropTypes.func
+    onContentChanged: React.PropTypes.func,
+    selected: React.PropTypes.number.isRequired
   },
 
   getDefaultProps: function(){
     return {
       rows: 10,
-      columns: 10
+      columns: 10,
+      selected: 0
     };
   },
 
@@ -31,17 +33,24 @@ var InventoryGrid = React.createClass({
   _renderGrid: function(){
     var results = [];
     var self = this;
+    var i = 1;
     for(var row = 0; row < this.props.rows; row++){
       for(var col = 0; col < this.props.columns; col++){
         var b = this.props.contents[row+","+col];
+        var selected = i === this.props.selected;
+        if(selected){
+          console.log("Selected", i);
+        }
         results.push(
           <InventoryItem left={col*columnWidth} top={row*rowHeight} item={b}
                          itemKey={row+","+col}
                          key={row+","+col}
+                         selected={selected}
                          onDropItem={self.onDropItem}
                          onRemoveItem={self.onRemoveItem}>
           </InventoryItem>
         );
+        i += 1;
       }
     }
     return results;

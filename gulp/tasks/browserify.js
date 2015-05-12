@@ -5,6 +5,7 @@ var bundleLogger = require('../util/bundleLogger');
 var gulp = require('gulp');
 var handleErrors = require('../util/handleErrors');
 var source = require('vinyl-source-stream');
+var babelify = require('babelify');
 
 var config = {
   debug: true,
@@ -26,6 +27,12 @@ gulp.task('browserify', function(callback){
       extensions: config.extensions,
       debug: config.debug
     });
+
+    bundler.transform(babelify.configure({
+      stage: 0,
+      optional: ['runtime'],
+      ignore: /(node_modules)/
+    }))
 
     var bundle = function(){
       bundleLogger.start(bundleConfig.outputName);
