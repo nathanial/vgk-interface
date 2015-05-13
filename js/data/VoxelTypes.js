@@ -36,8 +36,19 @@ var VoxelTypes = _.flatten([
   require('../../assets/organic/trees/spruce/spruce.json')
 ]);
 
+var root = "file://C:/Users/nathanial/Projects/vgk-interface/";
 _.each(VoxelTypes, function(vtype, index){
   vtype.block = index + 1;
+
+  if(_.isObject(vtype.images)){
+    vtype.images['top'] = root + vtype.images['top']
+    if(!vtype.images['bottom']){
+      vtype.images['bottom'] = root + vtype.images['top']
+    }
+    vtype.images['side'] = root + vtype.images['side'];
+  } else {
+    vtype.images = root + vtype.images;
+  }
 });
 
 
