@@ -1,8 +1,0 @@
-{
-  "name" : "Melon",
-  "images" : {
-    "top" : "assets/organic/melon/melon_top.png",
-    "side" : "assets/organic/melon/melon_side.png",
-    "bottom" : "assets/organic/melon/melon_top.png"
-  }
-}
