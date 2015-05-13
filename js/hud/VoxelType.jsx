@@ -1,14 +1,15 @@
-var React = require('react');
+import React from 'react';
+import Component from '../components/Component';
 
-var VoxelType = React.createClass({
+class VoxelType extends Component {
 
-  propTypes: {
+  static propTypes = {
     voxelType: React.PropTypes.object.isRequired,
     onSelected: React.PropTypes.func.isRequired,
     selected: React.PropTypes.bool.isRequired
-  },
+  }
 
-  render: function(){
+  render(){
     var style = this.getStyle();
     var type = this.props.voxelType;
     var classes = "voxel-type";
@@ -21,13 +22,13 @@ var VoxelType = React.createClass({
         <span className="voxel-type-name">{type.name}</span>
       </div>
     );
-  },
+  }
 
-  onClick: function(){
+  onClick(){
     this.props.onSelected(this.props.voxelType);
-  },
+  }
 
-  getStyle: function(){
+  getStyle(){
     return {
       voxelImage: {
         width: 42,
@@ -40,6 +41,6 @@ var VoxelType = React.createClass({
       }
     };
   }
-});
+}
 
 module.exports = VoxelType;

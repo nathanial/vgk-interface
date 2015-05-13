@@ -20,7 +20,6 @@ class Toolbox extends Component {
   }
 
   render(){
-    console.log("SET SELECTED", this.state.selected);
     return (
       <div className="toolbox">
         <InventoryGrid columns={9}

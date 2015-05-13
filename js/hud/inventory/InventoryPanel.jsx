@@ -1,17 +1,17 @@
-var React = require('react');
-var Draggable = require('react-draggable2');
-var Panel = require('react-bootstrap/lib/Panel');
-var Button = require('react-bootstrap/lib/Button');
-var InventoryGrid = require('./InventoryGrid');
-var Panel = require('../../components/Panel');
+import React from 'react';
+import Draggable from 'react-draggable2';
+import {Button} from 'react-bootstrap';
+import InventoryGrid from './InventoryGrid';
+import Panel from '../../components/Panel';
+import Component from '../../components/Component';
 
-var InventoryPanel = React.createClass({
+class InventoryPanel extends Component {
 
-  propTypes: {
+  static propTypes = {
     player: React.PropTypes.object.isRequired
-  },
+  }
 
-  render: function(){
+  render(){
     var style = this.getStyle();
 
     var header = (
@@ -39,9 +39,9 @@ var InventoryPanel = React.createClass({
         </div>
       </Panel>
     );
-  },
+  }
 
-  getStyle: function(){
+  getStyle(){
     return {
       closeBtn: {
         position: 'absolute',
@@ -49,15 +49,15 @@ var InventoryPanel = React.createClass({
         top: 3
       }
     };
-  },
+  }
 
-  onToolboxChanged: function(){
+  onToolboxChanged(){
     this.props.player.emitEvent('toolbox-changed');
-  },
+  }
 
-  onBackpackChanged: function(){
+  onBackpackChanged(){
     this.props.player.emitEvent('backpack-changed');
   }
-});
+}
 
 module.exports = InventoryPanel;

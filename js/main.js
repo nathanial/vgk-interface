@@ -11,10 +11,7 @@ var Commands = require('./commands');
 Commands.bind();
 
 window.engine.on('Ready', function(){
-  _.each(VoxelTypes, function(VoxelType){
-    window.engine.call("RegisterVoxelType", JSON.stringify(VoxelType));
-  });
-  window.engine.call("RegistrationFinished");
+  window.engine.call("RegisterVoxelTypes", JSON.stringify(VoxelTypes));
 });
 
 $(function(){

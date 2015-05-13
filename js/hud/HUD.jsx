@@ -1,23 +1,25 @@
-var React = require('react');
-var $ = require('jquery');
-var _ = require('lodash');
-var Toolbox = require('./Toolbox');
-var InventoryPanel = require('./inventory/InventoryPanel');
-var MainMenu = require('./menu/MainMenu');
-var Player = require('../player/Player');
-var GlobalEventService = require('../GlobalEventService');
+import React from 'react';
+import $ from 'jquery';
+import _ from 'lodash';
+import Toolbox from './Toolbox';
+import InventoryPanel from './inventory/InventoryPanel';
+import MainMenu from './menu/MainMenu';
+import Player from '../player/Player';
+import GlobalEventService from '../GlobalEventService';
+import Component from '../components/Component';
 
-var HUD = React.createClass({
+class HUD extends Component {
 
-  getInitialState: function(){
-    return {
+  constructor(props){
+    super(props);
+    this.state = {
       player: new Player(),
       panel: 'main-menu'
     };
-  },
+  }
 
-  render: function(){
-    var style = this.getStyle();
+  render(){
+    const style = this.getStyle();
     return (
       <div style={style.hud}>
         <InventoryPanel style={style.inventory} player={this.state.player}></InventoryPanel>
@@ -25,10 +27,10 @@ var HUD = React.createClass({
         <Toolbox player={this.state.player}></Toolbox>
       </div>
     );
-  },
+  }
 
-  getStyle: function(){
-    var style = {
+  getStyle(){
+    const style = {
       hud: {
         position: 'absolute',
         left: 0,
@@ -46,19 +48,19 @@ var HUD = React.createClass({
       style.mainMenu.display = 'none';
     }
     return style;
-  },
+  }
 
-  componentDidMount: function(){
+  componentDidMount(){
     GlobalEventService.addListener('exit', this.onExit);
     GlobalEventService.addListener('open-inventory', this.onOpenInventory);
-  },
+  }
 
-  componentWillUnmount: function(){
+  componentWillUnmount(){
     GlobalEventService.removeListener('close-hud', this.onCloseHUD);
     GlobalEventService.removeListener('open-inventory', this.onOpenInventory);
-  },
+  }
 
-  onExit: function(){
+  onExit(){
     if(this.state.panel){
       window.engine.call('UnfreezePlayer')
       this.setState({
@@ -70,14 +72,14 @@ var HUD = React.createClass({
         panel: 'main-menu'
       });
     }
-  },
+  }
 
-  onOpenInventory: function(){
+  onOpenInventory(){
     window.engine.call('FreezePlayer')
     this.setState({
       panel: 'inventory'
     });
   }
-});
+}
 
 module.exports = HUD;

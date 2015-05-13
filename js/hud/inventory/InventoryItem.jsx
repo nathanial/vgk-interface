@@ -23,7 +23,6 @@ var InventoryItem = React.createClass({
       top: this.props.top
     };
     var classes = "inventory-item";
-    console.log("SELECTED", this.props.selected);
     if(this.props.selected){
       classes += " selected";
     }

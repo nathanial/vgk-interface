@@ -38,9 +38,6 @@ var InventoryGrid = React.createClass({
       for(var col = 0; col < this.props.columns; col++){
         var b = this.props.contents[row+","+col];
         var selected = i === this.props.selected;
-        if(selected){
-          console.log("Selected", i);
-        }
         results.push(
           <InventoryItem left={col*columnWidth} top={row*rowHeight} item={b}
                          itemKey={row+","+col}
