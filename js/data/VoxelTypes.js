@@ -43,7 +43,7 @@ _.each(VoxelTypes, function(vtype, index){
   if(_.isObject(vtype.images)){
     vtype.images['top'] = root + vtype.images['top']
     if(!vtype.images['bottom']){
-      vtype.images['bottom'] = root + vtype.images['top']
+      vtype.images['bottom'] = vtype.images['top']
     }
     vtype.images['side'] = root + vtype.images['side'];
   } else {
