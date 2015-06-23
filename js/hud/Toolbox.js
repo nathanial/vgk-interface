@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'lodash';
-import VoxelTypes from '../data/VoxelTypes';
 import VoxelType from './VoxelType';
 import InventoryGrid from './inventory/InventoryGrid';
 import Component from '../components/Component';

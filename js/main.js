@@ -1,5 +1,4 @@
 var React = require('react');
-var VoxelTypes = require('./data/VoxelTypes');
 var _ = require('lodash');
 var HUD = require('./hud/HUD');
 var $ = require('jquery');
@@ -11,7 +10,7 @@ var Commands = require('./commands');
 Commands.bind();
 
 window.engine.on('Ready', function(){
-  window.engine.call("RegisterVoxelTypes", JSON.stringify(VoxelTypes));
+  //window.engine.call("RegisterVoxelTypes", JSON.stringify(VoxelTypes));
 });
 
 $(function(){

@@ -1,7 +1,6 @@
 var CubeIcon = require('cube-icon');
 var $ = require('jquery');
 var _ = require('lodash');
-var VoxelTypes = require('../data/VoxelTypes');
 
 var Block = function(name, count){
   this.voxel = _.find(VoxelTypes, function(vt){

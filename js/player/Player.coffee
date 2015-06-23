@@ -1,5 +1,4 @@
 Block = require '../items/Block'
-VoxelTypes = require '../data/VoxelTypes'
 EventEmitter = require 'wolfy87-eventemitter'
 
 seed = 1
@@ -14,6 +13,7 @@ class Player extends EventEmitter
     @backpack = {}
     row = 0
     column = 0
+    VoxelTypes = []
     for {name} in VoxelTypes
       @backpack[row+','+column] = new Block(name, (random() * 40).toFixed(0))
       column += 1
